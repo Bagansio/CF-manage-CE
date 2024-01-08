@@ -40,4 +40,4 @@ def instance_on_off(request):
         return handle_off(instances_client, instance_data, env)
     
     except GeneralException as exception:
-        return generate_error_response(exception.error_code, exception.message)
+        return generate_error_response(exception.message, exception.error_code)
